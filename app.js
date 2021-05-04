@@ -6,7 +6,7 @@ const port = 4000
 //app.use(require('bodyParser').json());
 app.use(cors())
 
-/*const todosBairros = [{
+const todosBairros = [{
     bairro: "CENTRO",
     coordenadas: "29° 55' 04''S  51° 11' 01''W"
 },
@@ -42,10 +42,10 @@ coordenadas: "51° 12' 36''S 29° 56' 44''W"
 {
     default:
         coordenadas = "G M S"
-}]*/
+}]
 
 //Pegar  TODOS os bairros 
-app.get('/todosBairros', (req, res) => {
+app.get('/bairros', (req, res) => {
 
     res.json(todosBairros);
 
