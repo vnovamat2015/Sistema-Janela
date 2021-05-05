@@ -3,11 +3,11 @@ const cors = require('cors')
 const bodyParser = require('body-parser');
 const app = express()
 const port = 4000
-//app.use(require('bodyParser').json());
+app.use(bodyParser.json())
 app.use(cors())
 
 const todosBairros = [{
-    bairro: "CENTRO",
+    bairro: "CENTROS",
     coordenadas: "29° 55' 04''S  51° 11' 01''W"
 },
 {
@@ -45,7 +45,7 @@ coordenadas: "51° 12' 36''S 29° 56' 44''W"
 }]
 
 //Pegar  TODOS os bairros 
-app.get('/bairros', (req, res) => {
+app.get('/bairrosX', (req, res) => {
 
     res.json(todosBairros);
 
@@ -82,10 +82,10 @@ app.post('/teste', (req, res) =>{
 
 
 //cadastrar //ROTA
-app.post('/todosBairros', (req, res) => {
+app.post('/relatorio', (req, res) => {
     const card = req.body;
 
-    todosBairros.push(card);
+ console.log(card)
     res.json(todosBairros);  
 })
 
