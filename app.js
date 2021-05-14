@@ -45,7 +45,7 @@ coordenadas: "51° 12' 36''S 29° 56' 44''W"
 }]
 
 //Pegar  TODOS os bairros 
-app.get('/bairrosX', (req, res) => {
+app.get('/bairros', (req, res) => {
 
     res.json(todosBairros);
 
