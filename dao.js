@@ -1,15 +1,9 @@
-const express = require('express')
-const cors = require('cors')
-const bodyParser = require('body-parser');
-const app = express()
-const port = 4000
-//app.use(require('bodyParser').json());
-app.use(cors())
-
-// Fazer uma função que chama  a linha 20 Frontend/Servidor ( <option>----</option>)
-
 const todosBairros = [{
-    bairro: "CENTRO",
+    bairro: "CENTROS",
+    coordenadas: "29° 55' 04''S  51° 11' 01''W"
+},
+{
+    bairro: "NOVO",
     coordenadas: "29° 55' 04''S  51° 11' 01''W"
 },
 {
@@ -41,18 +35,24 @@ coordenadas: "51° 11' 06''S 29° 57' 54''W"
 {    bairro: "HARMONIA",
 coordenadas: "51° 12' 36''S 29° 56' 44''W"
 },
+{    bairro: "OLARIA",
+'coordenadas': "51° 12' 36''S 29° 56' 44''W"
+},
 {
     default:
         coordenadas = "G M S"
 }]
-// Fazer uma função  
+exports.localizaBairro = function(nomebairro){
+    let bairroEncontrado = []
 
-
-
-
-
-app.listen(port, () => {
-   
-    // console.log(todosBairros)
-     console.log("O servidor está rodando...",);
-      });
+    for(i=0;i<todosBairros.length;i++){
+        const bairro = todosBairros[i];
+        if(bairro.bairro == nomebairro){
+            bairroEncontrado.push(bairro);
+            break;
+        }
+    }
+}
+exports.listaBairros = function(){
+    return todosBairros
+}
