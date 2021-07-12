@@ -20,7 +20,7 @@ const resultadobairroEncontrado =service.bairroEncontrado(req.params.idcard)
         res.sendStatus(404);
     }
 });
-router.post('/relatorio', (req, res) =>{
+router.post('/listar', (req, res) =>{
     //const teste = req.body;
     //teste.push();
     console.log(req.body);

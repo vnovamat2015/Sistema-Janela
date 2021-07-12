@@ -1,5 +1,5 @@
 const todosBairros = [{
-    bairro: "CENTROS",
+    bairro: "CENTRO",
     coordenadas: "29° 55' 04''S  51° 11' 01''W"
 },
 {
