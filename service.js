@@ -1,14 +1,13 @@
 const dao = require ('./dao.js')
 
-exports.bairroEncontrado = function(nomebairro){
-  const resultado = dao.localizaBairro(nomebairro)
+exports.sensorEncontrado = function(nomesensor){
+  const resultado = dao.localizaSensor(nomesensor)
   return resultado
 }
 
-exports.todosBairros = function(){
-    const resultado = dao.listaBairros()
-   // console.log('ESTOU SERVICE',resultado )
-    return resultado
+exports.todosSensores = function(){
+    const resultado = dao.listaSensores()
+       return resultado
 }
 
 

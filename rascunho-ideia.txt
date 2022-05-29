@@ -119,8 +119,6 @@ funcao2( function(){
         })
 
  });
-
-
     //registrosChuvaDao.js
     exports.save = function(registrosChuva,callback){
         try{
@@ -130,9 +128,4 @@ funcao2( function(){
         callback(erro);
     }
  }
-
-
-
-
-
 ]
